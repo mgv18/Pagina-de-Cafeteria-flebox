@@ -104,7 +104,9 @@ ul { list-style: none; }
   overflow: hidden;
 }
 
-.tarjeta-imagen { height: 110px; }
+.tarjeta-imagen { height: 110px; 
+    background: #8d6e63;
+}            
 
 .tarjeta-cuerpo {
   display: flex;                 /* contenedor flex 8 */
