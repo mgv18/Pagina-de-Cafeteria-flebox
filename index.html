@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Café La Plaza · Armenia, Quindío</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="encabezado">
+    <a class="logo" href="#inicio">Café La Plaza</a>
+    <input class="buscador" type="search" placeholder="Buscar en el menú" aria-label="Buscar en el menú">
+    <nav>
+      <ul class="menu-nav">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#menu">Menú</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="contenido" id="inicio">
+
+    <aside class="barra-lateral">
+      <h2>Categorías</h2>
+      <ul class="categorias">
+        <li><a class="activa" href="#calientes">Bebidas calientes</a></li>
+        <li><a href="#frias">Bebidas frías</a></li>
+        <li><a href="#panaderia">Panadería</a></li>
+        <li><a href="#postres">Postres</a></li>
+      </ul>
+    </aside>
+
+    <main class="principal" id="menu">
+      <h1>Nuestro menú</h1>
+
+      <section class="productos">
+
+        <article class="tarjeta">
+          <div class="tarjeta-imagen color-tinto"></div>
+          <div class="tarjeta-cuerpo">
+            <h3>Tinto</h3>
+            <p>Café de origen, preparado en greca.</p>
+            <span class="precio">$ 2.500</span>
+            <button type="button">Agregar</button>
+          </div>
+        </article>
+
+        <article class="tarjeta">
+          <div class="tarjeta-imagen color-capuchino"></div>
+          <div class="tarjeta-cuerpo">
+            <h3>Capuchino</h3>
+            <p>Espresso con leche espumada.</p>
+            <span class="precio">$ 6.500</span>
+            <button type="button">Agregar</button>
+          </div>
+        </article>
+
+        <article class="tarjeta">
+          <div class="tarjeta-imagen color-pandebono"></div>
+          <div class="tarjeta-cuerpo">
+            <h3>Pandebono</h3>
+            <p>Recién horneado, receta tradicional.</p>
+            <span class="precio">$ 3.000</span>
+            <button type="button">Agregar</button>
+          </div>
+        </article>
+
+        <!-- Producto del día: cuarta posición en el HTML, primera en pantalla (order: -1) -->
+        <article class="tarjeta producto-dia">
+          <div class="tarjeta-imagen color-granizado"></div>
+          <div class="tarjeta-cuerpo">
+            <span class="etiqueta">Producto del día</span>
+            <h3>Granizado de café</h3>
+            <p>Café, hielo y leche condensada, ideal para la tarde.</p>
+            <span class="precio">$ 9.000</span>
+            <button type="button">Agregar</button>
+          </div>
+        </article>
+
+        <article class="tarjeta">
+          <div class="tarjeta-imagen color-torta"></div>
+          <div class="tarjeta-cuerpo">
+            <h3>Torta de café</h3>
+            <p>Porción.</p>
+            <span class="precio">$ 7.500</span>
+            <button type="button">Agregar</button>
+          </div>
+        </article>
+
+        <article class="tarjeta">
+          <div class="tarjeta-imagen color-brownie"></div>
+          <div class="tarjeta-cuerpo">
+            <h3>Brownie</h3>
+            <p>Chocolate con nueces.</p>
+            <span class="precio">$ 5.500</span>
+            <button type="button">Agregar</button>
+          </div>
+        </article>
+
+      </section>
+    </main>
+
+  </div>
+
+  <footer class="pie" id="contacto">
+    <div class="pie-columna">
+      <h2>Horario de atención</h2>
+      <p>Lunes a sábado<br>7:00 a. m. a 7:00 p. m.</p>
+    </div>
+    <div class="pie-columna">
+      <h2>Dirección</h2>
+      <p>Calle 21 # 14-35<br>Armenia, Quindío</p>
+    </div>
+    <div class="pie-columna">
+      <h2>Redes sociales</h2>
+      <p>Instagram · Facebook · WhatsApp</p>
+    </div>
+  </footer>
+
+</body>
+</html>
