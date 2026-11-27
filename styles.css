@@ -2,53 +2,48 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-  display: flex;                 /* contenedor flex 1: página completa */
+  display: flex;
   flex-direction: column;
   min-height: 100vh;
-  font-family: "Segoe UI", system-ui, sans-serif;
+  font-family: Arial, sans-serif;
   background: #f9f5ef;
   color: #3e2723;
 }
 
-a { color: inherit; text-decoration: none; }
+a { text-decoration: none; }
 ul { list-style: none; }
 
 /* ---------- 1. Encabezado ---------- */
 .encabezado {
-  display: flex;                 /* contenedor flex 2 */
-  justify-content: space-between; /* logo a la izquierda, menú a la derecha */
-  align-items: center;           /* centrado vertical */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   gap: 24px;
   padding: 16px 24px;
   background: #3e2723;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
   color: #f0e6da;
 }
 
-.logo { font-size: 1.25rem; font-weight: 700; }
-
-.menu-nav {
-  display: flex;                 /* contenedor flex 3 */
-  gap: 24px;                     /* separación uniforme entre enlaces */
-}
-
-.menu-nav a:hover,
-.menu-nav a:focus-visible { text-decoration: underline; }
-
-/* Reto: buscador que ocupa todo el espacio libre entre logo y menú */
 .buscador {
   flex: 1;
-  min-width: 0;
   padding: 8px 12px;
-  border: 0;
-  border-radius: 6px;
-  background: #f0e6da;
-  color: #3e2723;
-  font: inherit;
 }
+
+.menu-nav {
+  display: flex;
+  gap: 24px;
+}
+
+.menu-nav a { color: #f0e6da; }
 
 /* ---------- Contenido: barra lateral + productos ---------- */
 .contenido {
-  display: flex;                 /* contenedor flex 4 */
+  display: flex;
   flex: 1;
   gap: 24px;
   padding: 24px;
@@ -56,16 +51,18 @@ ul { list-style: none; }
 
 /* ---------- 2. Barra lateral ---------- */
 .barra-lateral {
-  flex: 0 0 220px;               /* ancho fijo de 220px */
+  flex: 0 0 220px;
   padding: 20px 16px;
   background: #f0e6da;
-  border-radius: 10px;
 }
 
-.barra-lateral h2 { font-size: 1rem; margin-bottom: 12px; }
+.barra-lateral h2 {
+  font-size: 16px;
+  margin-bottom: 12px;
+}
 
 .categorias {
-  display: flex;                 /* contenedor flex 5 */
+  display: flex;
   flex-direction: column;
   gap: 6px;
 }
@@ -73,100 +70,81 @@ ul { list-style: none; }
 .categorias a {
   display: block;
   padding: 8px 10px;
-  border-radius: 6px;
-  font-size: 0.9rem;
+  color: #3e2723;
 }
 
-.categorias a:hover,
-.categorias a:focus-visible { background: #e3d3c1; }
-
-.categorias a.activa { background: #5d4037; color: #fff; }
+.categorias a.activa {
+  background: #5d4037;
+  color: white;
+}
 
 /* ---------- 3. Sección de productos ---------- */
-.principal { flex: 1; min-width: 0; } /* ocupa todo el espacio junto a la barra */
+.principal { flex: 1; }
 
-.principal h1 { font-size: 1.25rem; margin-bottom: 16px; }
+.principal h1 {
+  font-size: 20px;
+  margin-bottom: 16px;
+}
 
 .productos {
-  display: flex;                 /* contenedor flex 6 */
-  flex-wrap: wrap;               /* pasan a la siguiente línea si no caben */
-  gap: 20px;                     /* separación uniforme */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .tarjeta {
-  display: flex;                 /* contenedor flex 7 */
+  display: flex;
   flex-direction: column;
   width: 250px;
-  max-width: 100%;
-  background: #fff;
+  background: white;
   border: 1px solid #e8dccd;
-  border-radius: 10px;
-  overflow: hidden;
 }
 
-.tarjeta-imagen { height: 110px; 
-    background: #8d6e63;
-}            
+.tarjeta-imagen {
+  height: 110px;
+  background: #8d6e63;
+}
 
 .tarjeta-cuerpo {
-  display: flex;                 /* contenedor flex 8 */
+  display: flex;
   flex-direction: column;
-  flex: 1;                       /* la tarjeta rellena toda su altura */
+  flex: 1;
   gap: 6px;
   padding: 14px;
 }
 
 .tarjeta-cuerpo p {
-  flex: 1;                       /* empuja precio y botón hacia abajo */
-  font-size: 0.85rem;
-  color: #6d4c41;
+  flex: 1;
+  font-size: 14px;
 }
 
-.precio { font-weight: 700; }
+.precio { font-weight: bold; }
 
 .tarjeta button {
   padding: 9px;
-  border: 0;
-  border-radius: 6px;
+  border: none;
   background: #5d4037;
-  color: #fff;
-  font: inherit;
-  font-size: 0.85rem;
-  cursor: pointer;
+  color: white;
 }
-
-.tarjeta button:hover,
-.tarjeta button:focus-visible { background: #3e2723; }
-
-/* Colores de los bloques de imagen */
-.color-tinto     { background: #6d4c41; }
-.color-capuchino { background: #a1887f; }
-.color-pandebono { background: #e0b36a; }
-.color-granizado { background: #8d6e63; }
-.color-torta     { background: #7b5546; }
-.color-brownie   { background: #4e342e; }
 
 /* ---------- 4. Producto del día ---------- */
 .producto-dia {
-  order: -1;                     /* se muestra primero, sigue 4.º en el HTML */
+  order: -1;
   background: #fff6dc;
   border: 2px solid #d4a017;
 }
 
-/* Reto: etiqueta a la derecha sin afectar al resto del contenido */
 .etiqueta {
   align-self: flex-end;
   padding: 2px 10px;
-  border-radius: 999px;
   background: #d4a017;
-  color: #3e2723;
-  font-size: 0.75rem;
-  font-weight: 700;
+  font-size: 12px;
+  font-weight: bold;
 }
 
 /* ---------- 5. Pie de página ---------- */
 .pie {
-  display: flex;                 /* contenedor flex 9 */
+  display: flex;
   gap: 24px;
   padding: 24px;
   background: #3e2723;
@@ -174,10 +152,11 @@ ul { list-style: none; }
 }
 
 .pie-columna {
-  flex: 1;                       /* flex: 1 => flex-basis 0: mismo ancho siempre */
-  min-width: 0;
-  overflow-wrap: anywhere;       /* el texto largo no ensancha la columna */
+  flex: 1;
+  overflow-wrap: anywhere;
 }
 
-.pie-columna h2 { font-size: 0.9rem; color: #fff; margin-bottom: 8px; }
-.pie-columna p { font-size: 0.85rem; line-height: 1.5; }
+.pie-columna h2 {
+  font-size: 15px;
+  margin-bottom: 8px;
+}
