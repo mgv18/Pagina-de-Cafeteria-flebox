@@ -179,12 +179,3 @@ ul { list-style: none; }
 
 .pie-columna h2 { font-size: 0.9rem; color: #fff; margin-bottom: 8px; }
 .pie-columna p { font-size: 0.85rem; line-height: 1.5; }
-
-/* ---------- Pantallas pequeñas ---------- */
-@media (max-width: 760px) {
-  .contenido { flex-direction: column; }
-  .barra-lateral { flex: none; }
-  .encabezado { flex-wrap: wrap; }
-  .buscador { order: 3; flex-basis: 100%; }
-  .pie { flex-direction: column; }
-}
